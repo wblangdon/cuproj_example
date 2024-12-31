@@ -14,6 +14,11 @@ Usage:
 * Install cuspatial
 
 * Use ./postcode.bat to compile and link postcode.cu
+** postcode.bat assumes linux tcsh shell, it starts by including /opt/cuda/cuda-12.6 in the path
+  (you may need to adjust these for your CUDA installation).
+  It also assumes that your installation of cuspatial is in directory ../cuspatial
+  and cuspatial is using libproj.so.25.9.2.0
+  (For newer versions of cuspatial you may need to update the libproj.so version number)
 * Ensure have copy of postcode.in (postcode.cu has a few sanity checks to make sure it has read
 postcode.in correctly -- disable these if you want to use your own data file).
 * run ./postcode
